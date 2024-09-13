@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Form</title>
+</head>
+<body>
+<div class="Registration">
+	<h2>Register</h2>
+	<form action ="/register" method="POST">
+		<label for="username">Username:</label>
+		<input type="text" id ="username" name="username" required placeholder="Choose a username">
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required placeholder="Enter your email">
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required placeholder="Choose a password">
+
+		<label for="comment">About yourself:</label>
+		<textarea id="comment" name="comment" rows="4" cols="50">Describe yourself here</textarea>
+
+		<label>Select your skills:</label><br>
+        <label for="skills-html">HTML</label>
+        <input type="checkbox" id="skills-html" name="skills" value="HTML"><br>
+        <label for="skills-css">CSS</label>
+        <input type="checkbox" id="skills-css" name="skills" value="CSS"><br>
+        <label for="skills-js">JavaScript</label>
+        <input type="checkbox" id="skills-js" name="skills" value="JavaScript"><br>
+        <label for="skills-python">Python</label>
+        <input type="checkbox" id="skills-python" name="skills" value="Python"><br>
+        <label for="skills-java">Java</label>
+        <input type="checkbox" id="skills-java" name="skills" value="Java"><br>
+        <label for="skills-sql">SQL</label>
+        <input type="checkbox" id="skills-sql" name="skills" value="SQL"><br>
+        <label for="skills-photoshop">Photoshop</label>
+        <input type="checkbox" id="skills-photoshop" name="skills" value="Photoshop"><br>
+        <label for="skills-git">Git</label>
+        <input type="checkbox" id="skills-git" name="skills" value="Git"><br>
+
+        <label for="gender-male">Male</label>
+        <input type="radio" id="gender-male" name="gender" value="male" checked>
+        <label for="gender-female">Female</label>
+        <input type="radio" id="gender-female" name="gender" value="female">
+
+        <label for="region"> Region: </label>
+        <select id="region" name="region">
+		    <option value="Cherkasy">Cherkasy</option>
+		    <option value="Chernihiv">Chernihiv</option>
+		    <option value="Chernivtsi">Chernivtsi</option>
+		    <option value="Dnipropetrovsk">Dnipropetrovsk</option>
+		    <option value="Donetsk">Donetsk</option>
+		    <option value="Ivano-Frankivsk">Ivano-Frankivsk</option>
+		    <option value="Kharkiv">Kharkiv</option>
+		    <option value="Kherson">Kherson</option>
+		    <option value="Khmelnytskyi">Khmelnytskyi</option>
+		    <option value="Kirovohrad">Kirovohrad</option>
+		    <option value="Kyiv">Kyiv</option>
+		    <option value="Luhansk">Luhansk</option>
+		    <option value="Lviv">Lviv</option>
+		    <option value="Mykolaiv">Mykolaiv</option>
+		    <option value="Odessa">Odessa</option>
+		    <option value="Poltava">Poltava</option>
+		    <option value="Rivne">Rivne</option>
+		    <option value="Sumy">Sumy</option>
+		    <option value="Ternopil">Ternopil</option>
+		    <option value="Vinnytsia">Vinnytsia</option>
+		    <option value="Volyn">Volyn</option>
+		    <option value="Zakarpattia">Zakarpattia</option>
+		    <option value="Zaporizhzhia">Zaporizhzhia</option>
+		    <option value="Zhytomyr">Zhytomyr</option>
+		    <option value="Autonomous Republic of Crimea">Autonomous Republic of Crimea</option>
+        </select>
+
+        <label for="date">Redistration Date:</label>
+        <input type="date" id="date" name="date">
+
+        <button type="submit">Registration</button>
+        <button type="reset">Clear</button>
+	</form>
+</div>
+</body>
+</html>
