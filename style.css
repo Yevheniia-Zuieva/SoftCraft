@@ -1,0 +1,132 @@
+/*стилі для заголовку першого рівня*/
+h1{
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 800;
+	color: #090841;
+	font-size: 2em;
+	text-align: center;
+	line-height: 1.5;
+}
+
+/*стилі для заголовку другого рівня*/
+h2{
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 500;
+	color: #000080;
+	font-size: 1.5em;
+	text-align: left;
+	line-height: 1.5;
+}
+
+/*колір за замовчуванням чорний і без підкреслень для меню*/
+a{
+	color: #000000;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+/*при наведенні зміна кольору та підкреслення*/
+a:hover{
+	color: #000080;
+	/*text-decoration: underline;*/
+	background-color: #B3804F;
+}
+
+div {
+  margin-top: 20px; 
+  margin-right: 10px; 
+  margin-bottom: 30px; 
+  margin-left: 15px; 
+}
+
+/*налаштування header*/
+.header {
+    background-color: #FCC; /*колір фону*/
+    padding: 10px; /*внутрішні відступи*/
+    display: flex; /*вирівнюваня елементів по горизонталі*/
+    align-items: center; /*вирівнювання елементів по вертикалі*/
+    justify-content: space-between; /*додає простір між елементами*/
+}
+
+/*стилі для меню (що зверху) розміщення по центру*/
+#Menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+/*розміщення меню в один рядок*/
+#Menu li {
+    display: inline;
+    margin-right: 15px;
+}/*
+
+/*налаштування розміщення картинок*/
+.collections {
+    display: flex;
+    flex-wrap: wrap; /*дозволяє розміщувати елементи в декілька рядків*/
+    justify-content: space-between; /* додає простір між елементами*/
+}
+
+.collections-item {
+    flex: 1 1 22%; /*робить кожен елемент однакової ширини та заповнює 22% батьківського контейнера*/
+    box-sizing: border-box; /*гарантує правильне обчислення ширини та висоти*/
+    margin-bottom: 20px; /*додає відступ знизу між рядками*/
+    text-align: center; /*центрує підписи під картинками*/
+}
+
+.collections-item img {
+    max-width: 100%; /*гарантує, що картинка не вийде за межі блоку*/
+    height: auto; /*автоматичне визначення висоти з урахуванням співвідношення сторін*/
+}
+
+/*налаштування для footer*/
+.site-footer{
+	background-color: #FCC;
+	border-color: #FCC;
+}
+
+.footer-content {
+    display: flex; /*для розташування в ряд соціальних медіа, логотипу та телефонів*/
+    justify-content: space-between; /*рівномірне розподілення простору*/
+    align-items: center;
+    flex-wrap: wrap; /*перенесення елементів на новий рядок при зміні розміру екрану*/
+    text-align: center;
+}
+
+/*вирівнювання ширини розділів для соціальних мереж та номерів телефонів*/
+.social-media, .contact-phones {
+    flex: 1;
+}
+
+/*прибираємо точки у списку телефонів*/
+.contact-phones ul {
+    list-style: none; /*видалення стандартних маркерів списку */
+    padding-left: 0; /*забирає відступ зліва*/
+    margin: 0; /*забирає зовнішні відступи*/
+}
+
+/*розміщення логотипу по центру та перевірка, що він займає однакову ширину*/
+.footer-logo {
+    flex: 1;
+    text-align: center;
+}
+
+/*розміщуємо посилання (меню) по центру*/
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*розміщуємо посилання (меню) в один рядок*/
+.footer-links ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/*інформація про авторські права в центрі*/
+.copyright {
+    text-align: center;
+    font-size: 0.9em;
+}
+
