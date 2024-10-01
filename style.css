@@ -1,6 +1,10 @@
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, div {
+    font-family: 'Merriweather', sans-serif;
+}
+
 /*стилі для заголовку першого рівня*/
 h1{
-	font-family: 'Merriweather', sans-serif;
 	font-weight: 800;
 	color: #090841;
 	font-size: 2em;
@@ -10,17 +14,24 @@ h1{
 
 /*стилі для заголовку другого рівня*/
 h2{
-	font-family: 'Merriweather', sans-serif;
 	font-weight: 500;
 	color: #000080;
 	font-size: 1.5em;
-	text-align: left;
+	text-align: center;
 	line-height: 1.5;
 }
-
+p{
+    font-weight: 500;
+    color: #000000;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
 /*колір за замовчуванням чорний і без підкреслень для меню*/
 a{
-	color: #000000;
+    font-weight: 500;
+    color: #000000;
+    font-size: 1.1em;
+    line-height: 1.5;
 	text-decoration: none;
 	font-size: 1.2em;
 }
@@ -110,12 +121,15 @@ div {
 .footer-logo {
     flex: 1;
     text-align: center;
+    margin: 0; /* Видаляє всі зовнішні відступи */
 }
 
 /*розміщуємо посилання (меню) по центру*/
 .footer-links {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /*розміщуємо посилання (меню) в один рядок*/
@@ -130,3 +144,94 @@ div {
     font-size: 0.9em;
 }
 
+
+/*адаптивні стилі для роздільної здатності 1200px */
+@media (min-width: 1200px) {
+    .menu,
+    .header,
+    .footer-links ul {
+        display: flex;
+        align-items: center;
+    }
+}
+/*адаптивні стилі для екрана менше 1200рх*/
+@media (max-width:1200px) {
+    .collections-item {
+        flex: 1 1 30%; /*збільшуємо ширину елементів*/
+    }
+}
+/*адаптивні стилі для ширини екрана менше 992рх*/
+@media (max-width:992px) {
+    .header-title h1 {
+        font-size: 1.8em; /* зменшуємо розмір заголовка */
+    }
+    .collections-item {
+        flex: 1  1 45%; /*робиму ширину колонок більшою*/
+    }
+    #Menu li {
+        display: block; /*меню стає вертикальним*/
+        margin-bottom: 10px;
+    }
+}
+/*адаптивні стилі для ширини екрана менше 768рх*/
+@media (max-width:768px) {
+    .header-title h1 {
+        font-size: 1.6em;
+    }
+    .collections-item {
+        flex:1 1 100%; /*одна колонка для елементів*/
+        margin-bottom: 15px;
+    }
+    .header {
+        flex-direction: column;/*елементи заголовака вертикальні*/
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column; /*елементи футера вертикально*/
+    }
+    .copyright {
+        font-size: 0.8em; /* Зменшуємо розмір шрифту для ширини екрана менше 768px */
+    }
+}
+/*адаптивні стилі для ширини менше 600рх*/
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    p {
+       font-size: 0.9em;
+    }
+
+    .collections {
+        flex-direction: column; 
+    }
+
+    .collections-item {
+        flex: 1 1 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .collections-item img {
+        width: 100%; 
+        height: auto; 
+    }
+    #Menu {
+        text-align: center;
+    }
+    .footer-logo img {
+        width: 150px; /*зменшуємо логотип у футері*/
+    }
+    .footer-links ul li {
+        display: block; /*посилання вертикальні*/
+        margin-bottom: 5px;
+    }
+    .contact-phones ul li {
+        text-align: center;
+    }
+    .copyright {
+        font-size: 0.7em; 
+    }
+} 
