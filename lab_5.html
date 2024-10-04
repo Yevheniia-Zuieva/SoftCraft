@@ -19,6 +19,9 @@
    	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+	<!-- підключення Font Awesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<header class="header">
@@ -36,7 +39,8 @@
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#our_team">Our team</a></li>
 				<li><a href="#contact_us">Contact Us</a></li>
-				<li><a href="Login.html">Login</a></li> <!--додалося в 4 лабораторній роботі-->
+				<!--<li><a href="Login.html">Login</a></li> --> <!--додалося в 4 лабораторній роботі-->
+				<li><a href="#" id="open-lightbox">Login</a></li> <!--додано lightbox для логіну-->
 				<li><a href="Registration.html">Registration</a></li> <!-- додалося в 4 лабораторній роботі-->
 			</ul>
 		</div>
@@ -98,6 +102,40 @@
 		<h2 id="contact_us">Contact Us</h2>
 		<p>We’d love to hear from you! Whether you have a fully developed project plan or just a rough idea, reach out to us, and let’s discuss how we can bring your vision to life. We offer consultations to understand your needs and provide recommendations on the best way forward. Our goal is to become your long-term partner in success, offering ongoing support and solutions that grow with your business. Don’t hesitate to contact us today – we’re ready to help you create software that makes a difference.</p>
 	</section>
+
+<!-- форма логін в lightbox -->
+<div id="lightbox" style="display:none; position:fixed; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8);">
+    <div style="position:relative; margin:auto; padding:20px; background-color:#FCC; width:50%; top:25%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        <button id="close-lightbox" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:24px; cursor:pointer;">×</button>
+        <div id="lightbox-content" style="font-family: 'Merriweather', sans-serif; color: #090841;">
+            <form action="/login" method="post" style="display: flex; flex-direction: column; gap: 15px;">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Choose a username" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Choose a password" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+                <button type="submit" style="padding: 10px; background-color: #090841; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Login</button>
+            </form>
+            <div class="link" style="margin-top: 10px; text-align: center">
+                <p >Don`t have an account? <span class="signup-text"><a href="Registration.html" style="color: #090841;">Sign up</a></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Додаємо медіа-запит для екранів менше 600px */
+    @media (max-width: 600px) {
+        .signup-text {
+        	text-align: center;
+            display: block; /* Переводимо на новий рядок */
+            margin-top: 10px; /* Додаємо відступ для кращого вигляду */
+        }
+    }
+</style>
+
+
 </main>
 <!-- Footer -->
 <footer class="site-footer">
@@ -137,5 +175,8 @@
         &copy; 2024 Software development company. SoftCraft. All rights reserved.
     </div>
 </footer>
+
+<script src="lightbox.js"></script>
+
 </body>
 </html>
